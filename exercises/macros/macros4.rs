@@ -8,7 +8,7 @@ macro_rules! my_macro {
     ($val:expr) => {
         println!("Look at this other macro: {}", $val);
     };
-    ($a:String, $b:bool) => {
+    ($a:expr, $b:expr) => {
         println!("Look at this other macro: {},{}", $a,$b);
     }
 }

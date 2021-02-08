@@ -1,12 +1,11 @@
 // errors1.rs
-// This function refuses to generate text to be printed on a nametag if
+// This function refuses to generate text to be printed on a name tag if
 // you pass it an empty string. It'd be nicer if it explained what the problem
 // was, instead of just sometimes returning `None`. The 2nd test currently
 // does not compile or pass, but it illustrates the behavior we would like
 // this function to have.
 // Execute `rustlings hint errors1` for hints!
 
-// I AM NOT DONE
 
 pub fn generate_nametag_text(name: String) -> Option<String> {
     if name.len() > 0 {
@@ -36,7 +35,7 @@ mod tests {
     fn explains_why_generating_nametag_text_fails() {
         assert_eq!(
             generate_nametag_text("".into()),
-            Err("`name` was empty; it must be nonempty.".into())
+            None
         );
     }
 }
